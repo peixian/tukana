@@ -1,0 +1,22 @@
+* Tukana - A General Purpose Knowledge Tracking Application
+
+/"Great books are meant to be read, then read again backwards or upside down!" —Ettovard, Tolarian archivist/
+
+** What is it? 
+Tukana is a self-hosted general knowledge store, meant for tracking books, podcasts, papers, and other forms of information you want to keep around. 
+*** What it does:
+1. Tracks your books, podcasts, and papers. 
+2. Tags the things you've learned and read
+3. Set notes and log items for rereading. 
+4. Set goals for papers and books.
+5. Export list of what you've read. 
+
+** Why? 
+I end up consuming a lot of books and papers, and I've always wanted a nice way to track them, without having a weird social aspect tacked onto it. Tukana aims to solve that, by allowing you to self-host a datastore of things you've read and consumed.
+ 
+** Integrations
+- Pinboard for general tracking
+- Altemetric API for papers
+- isbndb for books
+- ??? for podcasts
+
