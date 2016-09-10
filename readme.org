@@ -1,6 +1,6 @@
 * Tukana - A General Purpose Knowledge Tracking Application
 
-/"Great books are meant to be read, then read again backwards or upside down!" —Ettovard, Tolarian archivist/
+"Great books are meant to be read, then read again backwards or upside down!" — /Ettovard, Tolarian archivist/
 
 ** What is it? 
 Tukana is a self-hosted general knowledge store, meant for tracking books, podcasts, papers, and other forms of information you want to keep around. 
@@ -20,3 +20,23 @@ I end up consuming a lot of books and papers, and I've always wanted a nice way 
 - isbndb for books
 - ??? for podcasts
 
+** Tech Details:
+*** Why is stuff stored as YAML? 
+It's so that if you ever want to perform operations on your data, or write your own application on top of the data there's minimum barriers. Loading a /lot/ of YAML isn't fast, but that's why there's a database with a subset of the data. 
+*** What's the naming format?
+All your stuff is stored by its type:
+
+#+BEGIN_SRC 
+/books/
+  |- Filename: <ISBN_NUMBER>.yaml 
+  |- All books are identified by their ISBN number, or lacking that, their name.
+/podcasts/
+  |- Filename: <PODCAST_NAME>_<PODCAST_EPISODE>.yaml
+  |- All podcasts are identified by their name, followed by their underscore, then the episode number
+/papers/
+  |- Filename: <GIVEN_NAME>.yaml
+  |- This one is wonky, it's the one of the two that uses a user-defined name. This may change in the future once I figure out a better way of tagging papers. 
+/other/
+  |- Filename: <GIVEN_NAME>.yaml
+  |- Same as papers, everything else gets shoved with a user-defined name. 
+#+END_SRC
